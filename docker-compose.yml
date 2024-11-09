@@ -1,0 +1,17 @@
+services:
+  aboslutey:
+    image: mydemophpimage
+    ports:
+      - "80:80"
+    environment:
+      MYSQL_DB_CONNECTION: test
+      MYSQL_DB_NAME: test
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test
+      SITE_URL: http://localhost
+    networks:
+      - test
+
+networks:
+  test:
+    external: true
